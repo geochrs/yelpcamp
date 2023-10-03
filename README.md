@@ -26,9 +26,12 @@ npm install
 Create a .env file (or just export manually in the terminal) in the root of the project and add the following:
 
 ```
-DATABASEURL='<url>'
-API_KEY=''<key>
-API_SECRET='<secret>'
+DB_URL='<url>'
+CLOUDINARY_CLOUD_NAME='<name>'
+CLOUDINARY_KEY='<key>'
+CLOUDINARY_SECRET='<secret>'
+MAPBOX_TOKEN='<token>'
+SECRET='<secret>'
 ```
 
 Run node app.js in the terminal with the project.
