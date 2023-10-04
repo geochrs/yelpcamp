@@ -14,16 +14,29 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="landing-header">
         <header class="mb-auto">
             <div>
-                <h3 class="float-md-start mb-0">YelpCamp</h3>
-                <nav class="nav nav-masthead justify-content-end float-md-right">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    <a class="nav-link" href="/campgrounds">Campgrounds</a>
-                    <% if(!currentUser) { %>
-                    <a class="nav-link" href="/user/login">Login</a>
-                    <a class="nav-link" href="/user/register">Register</a>
-                    <% } else { %>
-                    <a class="nav-link" href="/user/logout">Logout</a>
-                    <% } %>
+                <nav class="navbar navbar-expand-lg sticky-top">
+                    <div class="container-fluid">
+                        <h2 class="h2">YelpCamp</h2>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav ms-auto">
+                                <a class="nav-link active" href="/">Home</a>
+                                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+                            </div>
+                            <div class="navbar-nav">
+                                <% if(!currentUser) { %>
+                                <a class="nav-link" href="/user/login">Login</a>
+                                <a class="nav-link" href="/user/register">Register</a>
+                                <% } else { %>
+                                <a class="nav-link" href="/user/logout">Logout</a>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>

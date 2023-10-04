@@ -110,7 +110,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/dushaxfmg/",
+                "https://res.cloudinary.com/dxecbqbhk/",
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
