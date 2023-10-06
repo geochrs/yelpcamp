@@ -1,6 +1,15 @@
 <%- layout('layouts/boilerplate.ejs')%>
 <div id="cluster-map"></div>
-<h1 class="py-5">All Campgrounds</h1>
+<% if(!campgrounds) { %>
+<h1 class="pt-3">All Campgrounds</h1>
+<% } %>
+<form action="/campgrounds" method="GET" class="d-flex py-3 gap-2">
+    <input class="form-control" type="text" name="search" placeholder="Campground Search" aria-label="Search">
+    <button class="btn btn-outline-primary" type="submit">Search</button>
+</form>
+<% if (noMatch !== null) { %>
+    <h3 class="text-center"><%= noMatch %></h3>
+    <% } %>
 <% for (let campground of campgrounds) { %>
 <div class="card mb-3">
     <div class="row">
