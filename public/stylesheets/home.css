@@ -32,7 +32,6 @@ body {
 
 .nav-link.active {
     color: #edede9 !important;
-    /* color: red; */
     border-bottom-color: #edede9;
 }
 
